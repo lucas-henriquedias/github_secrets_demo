@@ -17,6 +17,11 @@ no server.js.
 ## Evidência de execução
 ![Pipeline executada](img/pipeline.png)
 
+A pipeline foi executada com sucesso (check verde). O log do passo "Executar
+aplicação" mostra que a aplicação recebeu o secret e informa apenas a quantidade
+de caracteres, sem exibir o valor. O main.yml agora usa
+${{ secrets.MENSAGEM_SECRETA }} e não contém mais o texto real.
+
 ## Respostas: Situação inicial
 1. O segredo está armazenado no próprio arquivo main.yml, dentro do repositório.
 2. Qualquer pessoa com acesso de leitura ao repositório (se for público, qualquer um).
